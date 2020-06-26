@@ -1,0 +1,105 @@
+.icon {
+    display         : inline-block;
+    background-image: url(./images/icon.png);
+    background-size : 350px 350px;
+    width           : 30px;
+    height          : 30px;
+}
+
+.icon-menu {
+    background-position: -317px 5px;
+}
+
+.icon-soso {
+    background-position: -320px -21px;
+}
+
+.icon-home {
+    background-position: -110px -4px;
+    background-size    : 280px 280px;
+}
+
+.icon-home-o {
+    background-position: -110px -33px;
+    background-size    : 280px 280px;
+}
+
+.icon-community {
+    background-position: -73px -33px;
+    background-size    : 280px 280px;
+}
+
+.icon-community-o {
+    background-position: -73px -4px;
+    background-size    : 280px 280px;
+}
+
+.icon-return {
+    background-position: -280px -10px;
+}
+
+.icon-add {
+    background-position: -320px -175px;
+}
+
+.icon-radio-check {
+    background-size    : 300px 300px;
+    background-position: -95px -128px;
+}
+
+.icon-radio {
+    background-size    : 300px 300px;
+    background-position: -127px -128px;
+}
+
+.icon-sub {
+    background-size    : 200px 200px;
+    background-position: -106px -25px;
+    width              : 20px;
+    height             : 20px;
+}
+
+.icon-add {
+    background-size    : 200px 200px;
+    background-position: -106px -4px;
+    width              : 20px;
+    height             : 20px;
+}
+
+.icon-cart {
+    background-size    : 280px 280px;
+    background-position: -36px -4px;
+}
+
+.icon-cart-o {
+    background-size    : 280px 280px;
+    background-position: -36px -33px;
+}
+.icon-my {
+    background-size    : 280px 280px;
+    background-position: 0 -4px;
+}
+.icon-my-o {
+    background-size    : 280px 280px;
+    background-position: 0 -33px;
+}
+.icon-pay{
+    background-position: 0 -250px;
+    background-size: 280px 280px;
+}
+.icon-recieve{
+    background-size: 280px 280px;
+    background-position: -32px -250px;
+}
+.icon-recieve-good{
+    background-position: -64px -250px;
+    background-size: 280px 280px;
+}
+.icon-cancel{
+    background-position: -92px -250px;
+    background-size: 280px 280px;
+}
+.icon-aftersale{
+    background-position: -120px -250px;
+    background-size: 280px 280px;
+}
