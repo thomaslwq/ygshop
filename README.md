@@ -1,68 +1,195 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 0 [商城在线地址](https://www.17sucai.com/preview/177065/2016-09-12/Sc-5/index.html)
 
-## Available Scripts
+# 1. 接口数据
 
-In the project directory, you can run:
+## 1.1. 商城接口
+***主要接口字段说明***
+***ret 接口标识码 等于0时，接口处理成功，非0时 接口信息出错***
+***msg 接口返回信息说明***
+***imgs 逗号隔开字符串***
+***wdata 接口数据返回字段（对象)***
 
-### `yarn start`
+1. 获取短信验证码
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   ```json
+   @url http://s.linweiqin.com/api/s/getMobileCode
+   @method post/get
+   @params mobile
+   @return msg,ret,wdata
+   @wdata: null
+   ```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. 用户注册接口
 
-### `yarn test`
+   ```json
+   @url http://s.linweiqin.com/api/s/createUser
+   @method post/get
+   @params username,password,code(验证码)
+   @return msg,ret,wdata
+   @wdata: username(名称),user_id,avator_url
+   ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. 用户登录接口
 
-### `yarn build`
+   ```json
+   @url http://s.linweiqin.com/api/s/loginCheck
+   @method post/get
+   @params username,password
+   @return msg,ret,wdata
+   @wdata: oauth_token(登录凭证),oauth_expire_time(登录凭证过期时间),user_id(用户ID),username(名称),avator_url(头像路径)
+   ```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. 用户退出接口
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+   ```json
+   @url http://s.linweiqin.com/api/s/logout
+   @method post/get
+   @params oauth_token
+   @return msg,ret,wdata
+   @wdata: 空
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. 用户个人信息修改
 
-### `yarn eject`
+   ```json
+   @url http://s.linweiqin.com/api/s/updateUserInfo
+   @method post/get
+   @params username,avator_url,oauth_token
+   @return msg,ret,wdata
+   @wdata: 空
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. 重置密码
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```json
+   @url http://s.linweiqin.com/api/s/updatePassword
+   @method post/get
+   @params currenPassword,updatePassword
+   @return msg,ret,wdata
+   @wdata: 空
+   ```
+   
+6. 首页轮播图
+   ```json
+   @url http://s.linweiqin.com/api/s/getIndexLoopimg
+   @method post/get
+   @params null
+   @return msg,ret,wdata
+   @wdata: loopimg_url(轮播图图片路径),loopimg_title(轮播图标题),loopimg_href(轮播图超链接)
+   ```
+7. 产品接口
+   ```json
+   @url http://s.linweiqin.com/api/s/getProducts
+   @method post/get
+   @params cid(可选)
+   @return msg,ret,wdata
+   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),,product_price(产品价格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   ```
+8. 分类接口
+   ```json
+   @url http://s.linweiqin.com/api/s/getCategorys
+   @method post/get
+   @params null
+   @return msg,ret,wdata
+   @wdata: cid(分类ID),category_name(分类名称),created_at(创建时间),has_sub(是否有下级),category_url(分类图片),sub_category(子类分类)
+   ```
+9. 商品详情接口
+   ```json
+   @url http://s.linweiqin.com/api/s/getProductDetail
+   @method post/get
+   @params pid
+   @return msg,ret,wdata
+   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),,product_price(产品价格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   ```
+10. 地址创建
+   ```json
+   @url http://s.linweiqin.com/api/s/createUserAddress
+   @method post/get
+   @params address(详细地址),address_name(收件人),address_mobile(联系方式),oauth_token
+   @return msg,ret,uaid
+   @uaid:  地址ID
+   ```
+11. 地址修改
+   ```json
+   @url http://s.linweiqin.com/api/s/updateUserAddress
+   @method post/get
+   @params address(详细地址),address_name(收件人),address_mobile(联系方式),oauth_token
+   @return msg,ret,uaid
+   @uaid:  地址ID
+   ```
+12. 地址删除
+   ```json
+   @url http://s.linweiqin.com/api/s/deleteUserAddress
+   @method post/get
+   @params uaid,oauth_token
+   @return msg,ret,uaid
+   @uaid:  地址ID
+   ```
+13. 地址列表
+   ```json
+   @url http://s.linweiqin.com/api/s/getUserAddressList
+   @method post/get
+   @params oauth_token
+   @return msg,ret,wdata
+   @wdata: address(详细地址),address_name(收件人),address_mobile(联系方式),uaid(地址ID)
+   ```
+10. 购物车接口
+   ```json
+   @url http://s.linweiqin.com/api/s/getCarts
+   @method post/get
+   @params oauth_token
+   @return msg,ret,wdata
+   @wdata: ucid(购物车ID),pid(产品ID),uid(用户ID),product_name(产品名称),product_price(产品价格),product_url(产品首图),product_number(购物车数量),created_at(创建时间)
+   ```
+11. 购物车增减接口
+   ```json
+   @url http://s.linweiqin.com/api/s/updateCarts
+   @method post/get
+   @params action 参数默认为 add
+   @params 当 action 等于 add 时, productNumber(增加数量),pid(产品ID),oauth_token
+   @params 当 action 等于 reduce 时,productNumber(减少数量),pid(产品ID),oauth_token
+   @params 当 action 等于 delete 时,pid(产品ID),oauth_token
+   @return msg,ret,wdata
+   @wdata: 空
+   ```
+12. 订单详情
+   ```json
+   @url http://s.linweiqin.com/api/s/getOrders
+   @method post/get
+   @params oauth_token
+   @return msg,ret,wdata
+   @wdata: uoid(订单ID),order_price(订单价格),order_express_info(订单地址信息),order_status(订单状态，0未支付，1已支付，2订单取消)
+   ```
+13. 订单创建
+   ```json
+   @url http://s.linweiqin.com/api/s/createOrder
+   @method post/get
+   @params oauth_token,uaid
+   @return msg,ret,uoid
+   @uoid:  订单ID
+   ```
+14. 订单取消
+   ```json
+   @url http://s.linweiqin.com/api/s/cancelOrder
+   @method post/get
+   @params oauth_token,uoid
+   @return msg,ret,wdata
+   @wdata: 空
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+16. 微信预支付返回数据接口
+   ```json
+   @url http://s.linweiqin.com/api/s/wxPrepay
+   @method post/get
+   @params oauth_token,uoid
+   @return msg,ret,payUrl
+   @payUrl: 支付跳转链接
+   ```
+17. 产品接口
+   ```json
+   @url http://s.linweiqin.com/api/s/getHotProducts
+   @method post/get
+   @params cid(可选)
+   @return msg,ret,wdata
+   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),,product_price(产品价格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   ```
