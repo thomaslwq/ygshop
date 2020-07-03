@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+<script>
+    axios.post("http://s.linweiqin.com/api/s/loginCheck",{
+        username:18988938574,
+        password:123456
+    }).then(res=>{
+        console.log(res)
+    }).catch(err=>console.log(err))
+</script>
+</html>

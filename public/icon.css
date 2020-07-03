@@ -103,3 +103,30 @@
     background-position: -120px -250px;
     background-size: 280px 280px;
 }
+.icon-addCommunity{
+    background-position: -320px -175px;
+    background-size: 350px 350px;
+}
+.icon-share{
+    background-position: -320px -142px;
+    background-size: 350px 350px
+}
+.icon-select{
+    width: 20px;
+    height: 20px;
+    background-size: 220px 220px;
+    background-position: -163px -5px;
+}
+.icon-scar{
+    height:40px;
+    width:40px;
+    background-size: 250px 250px;
+    background-position: -188px -25px;
+}
+
+
+
+
+
+
+}

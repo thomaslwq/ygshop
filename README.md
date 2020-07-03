@@ -1,5 +1,3 @@
-# 0 [商城在线地址](https://www.17sucai.com/preview/177065/2016-09-12/Sc-5/index.html)
-
 # 1. 接口数据
 
 ## 1.1. 商城接口
@@ -24,7 +22,7 @@
    ```json
    @url http://s.linweiqin.com/api/s/createUser
    @method post/get
-   @params username,password,code(验证码)
+   @params mobile,username,password,code(验证码)
    @return msg,ret,wdata
    @wdata: username(名称),user_id,avator_url
    ```
@@ -83,7 +81,7 @@
    @method post/get
    @params cid(可选)
    @return msg,ret,wdata
-   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),,product_price(产品价格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),product_origin_price(产品原价),product_price(产品价格),product_spec(产品规格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
    ```
 8. 分类接口
    ```json
@@ -99,7 +97,7 @@
    @method post/get
    @params pid
    @return msg,ret,wdata
-   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),,product_price(产品价格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   @wdata: call(020电话),pid(产品ID),cid(分类ID),product_name(产品名称),product_origin_price(产品原价),product_price(产品价格),product_spec(产品规格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
    ```
 10. 地址创建
    ```json
@@ -139,7 +137,7 @@
    @method post/get
    @params oauth_token
    @return msg,ret,wdata
-   @wdata: ucid(购物车ID),pid(产品ID),uid(用户ID),product_name(产品名称),product_price(产品价格),product_url(产品首图),product_number(购物车数量),created_at(创建时间)
+   @wdata: ucid(购物车ID),pid(产品ID),uid(用户ID),product_name(产品名称),product_price(产品价格),product_spec(产品规格),product_url(产品首图),product_number(购物车数量),created_at(创建时间)
    ```
 11. 购物车增减接口
    ```json
@@ -158,7 +156,8 @@
    @method post/get
    @params oauth_token
    @return msg,ret,wdata
-   @wdata: uoid(订单ID),order_price(订单价格),order_express_info(订单地址信息),order_status(订单状态，0未支付，1已支付，2订单取消)
+   @wdata: uoid(订单ID),order_price(订单价格),order_express_info(订单地址信息),order_status(订单状态，0未支付，1已支付，2订单取消),order_info(商品详情)
+   @order_info : ucid(购物车ID),uid(用户ID),pid(产品ID),product_price(产品价格),product_name(产品名称),product_url(产品首图),product_number(购物车数量),
    ```
 13. 订单创建
    ```json
@@ -185,11 +184,21 @@
    @return msg,ret,payUrl
    @payUrl: 支付跳转链接
    ```
-17. 产品接口
+17. 精选产品接口
    ```json
    @url http://s.linweiqin.com/api/s/getHotProducts
    @method post/get
    @params cid(可选)
    @return msg,ret,wdata
-   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),,product_price(产品价格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   @wdata: pid(产品ID),cid(分类ID),product_name(产品名称),product_origin_price(产品原价),product_price(产品价格),product_spec(产品规格),product_url(产品首图),product_urls(产品轮播图),product_desc(产品详情),created_at(创建时间)
+   ```
+
+18. 查询某个订单详情
+   ```json
+   @url http://s.linweiqin.com/api/s/getOrder
+   @method post
+   @params oauth_token,uoid
+   @return msg,ret,wdata
+   @wdata: uoid(订单ID),order_price(订单价格),order_express_info(订单地址信息),order_status(订单状态，0未支付，1已支付，2订单取消),order_info(商品详情)
+   @order_info : ucid(购物车ID),uid(用户ID),pid(产品ID),product_price(产品价格),product_name(产品名称),product_url(产品首图),product_number(购物车数量),
    ```

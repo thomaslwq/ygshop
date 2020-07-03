@@ -1,0 +1,168 @@
+.yg-my {
+    .yg-my-profile {
+        height  : 220px;
+        width: 100vw;
+        .my-profile-bg {
+            width   : 100vw;
+            height  : 220px;
+            position: relative;
+
+            .profile-bg {
+                width : 100%;
+                height: 100%;
+            }
+
+            .profile-bg-circle {
+                width        : 90px;
+                height       : 90px;
+                border-radius: 50%;
+                border       : 1px solid #fff;
+                position     : absolute;
+                top          : 50%;
+                left         : 50%;
+                transform    : translate(-50%, -50%);
+
+                .profile-bg-user {
+                    position     : absolute;
+                    top          : 50%;
+                    left         : 50%;
+                    transform    : translate(-50%, -50%);
+                    width        : 80px;
+                    height       : 80px;
+                    border-radius: 50%;
+
+                }
+            }
+        }
+        .my-profile-login {
+            height  : 220px;
+            width: 100vw;
+            position: relative;
+            img{
+                width:100%;
+                height:100%;
+            }
+            .profile-login-button {
+                border: 1px solid white;
+                width:100px;
+                border-radius: 5px;
+                font-size:18px;
+                color:white;
+                height:40px;
+                line-height: 40px;
+                text-align: center;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+          }
+    }
+
+    .yg-my-order {
+        width          : 100vw;
+        height         : 45px;
+        padding        : 0 10px;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        border-bottom  : 1px solid #ddd;
+
+        .my-order-left {
+            display    : flex;
+            align-items: center;
+
+            img {
+                height: 30px;
+                width : 30px;
+            }
+
+            span {
+                display    : inline-block;
+                margin-left: 10px;
+                font-size  : 16px;
+                color      : #333333;
+            }
+        }
+
+        .my-order-right {
+            display    : flex;
+            align-items: center;
+
+            span.order-right-text {
+                font-size: 13px;
+                color    : #999999;
+            }
+
+            i.icon.icon-select {}
+        }
+    }
+
+    .yg-my-orderNav {
+        height         : 74px;
+        padding        : 10px 0;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        border-bottom  : 1px solid #ddd;
+        margin-bottom  : 10px;
+
+        .my-orderNav-item {
+            flex           : 1;
+            display        : flex;
+            flex-direction : column;
+            align-items    : center;
+            justify-content: center;
+
+            .icon {}
+
+            .orderNav-item-text {
+                font-size: 15px;
+                color    : #737373;
+            }
+        }
+    }
+
+    .yg-my-systemFunc {
+        .my-systemFunc-list {
+            width:100vw;
+            border-top:1px solid #ddd;
+            margin-bottom: 10px;
+            .systemFunc-list-item {
+                height:45px;
+                border-bottom:1px solid #ddd;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+                .list-item-left {
+                    display:flex;
+                    align-items: center;
+                    img {
+                        height:30px;
+                        width:30px;
+                    }
+
+                    span {
+                        display: inline-block;
+                        margin-left:10px;
+                        color:#333333;
+                        font-size:16px;
+                    }
+                }
+
+                .list-item-right {
+                    display:flex;
+                    align-items: center;
+                    span {
+                        display:inline-block;
+                        font-size:13px;
+                        color:#999999;
+                    }
+
+                    i.icon.icon-select {}
+                }
+            }
+        }
+    }
+}

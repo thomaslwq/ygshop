@@ -1,0 +1,19 @@
+.yg-address {
+    .yg-address-header {
+        height:50px;
+        width:100vw;
+        background-color: var(--themeColor);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        i.icon.icon-return {}
+
+        span.address-header-title {
+            color:white;
+            font-size:20px;
+        }
+
+        span {}
+    }
+}

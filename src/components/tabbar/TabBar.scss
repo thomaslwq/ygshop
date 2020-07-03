@@ -1,0 +1,72 @@
+.yg-shop-tabbar {
+    .tabbar-content {
+        margin-bottom:66px;
+    }
+
+    .tabbar-footer {
+        height          : 66px;
+        width           : 100vw;
+        background-color: #fff;
+        position        : fixed;
+        bottom          : 0;
+        left            : 0;
+        display         : flex;
+        border-top      : 1px solid #ddd;
+
+        .activeTab{
+            color: var(--themeColor)
+        }
+        /*no*/
+        .tabbar-footer-home {
+            flex: 1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i.icon.icon-home {}
+
+            span.footer-item-title {
+                font-size:16px;
+            }
+        }
+
+        .tabbar-footer-community {
+            flex: 1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i.icon.icon-community {}
+
+            span.footer-item-title {
+                font-size:16px;
+            }
+        }
+
+        .tabbar-footer-cart {
+            flex: 1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i.icon.icon-cart {}
+
+            span.footer-item-title {
+                font-size:16px;
+            }
+        }
+
+        .tabbar-footer-my {
+            flex: 1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i.icon.icon-my {}
+
+            span.footer-item-title {
+                font-size:16px;
+            }
+        }
+    }
+}

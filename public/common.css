@@ -1,8 +1,12 @@
 * {
-    margin:0;
-    padding:0;
+    margin    : 0;
+    padding   : 0;
     box-sizing: border-box;
-  }
-  body{
-    --themeColor:#ec3c4e;
-  }
+}
+
+body {
+    --themeColor          : #ec3c4e;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing   : antialiased;
+    font-family:"Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei";
+}

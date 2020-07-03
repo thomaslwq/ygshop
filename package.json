@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "antd-mobile": "^2.3.3",
     "axios": "^0.19.2",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
@@ -48,6 +49,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-px2rem": "^0.3.0",
     "postcss-safe-parser": "4.0.1",
+    "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
@@ -65,8 +67,7 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1",
-    "zepto": "^1.2.0"
+    "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -142,8 +143,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "devDependencies": {
-    "n-zepto": "^1.2.0"
   }
 }

@@ -1,0 +1,206 @@
+.yg-pay {
+    .yg-pay-header {
+        position: fixed;
+        left:0;
+        top:0;
+        width:100vw;
+        height          : 50px;
+        background-color: var(--themeColor);
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        i.icon.icon-return {}
+
+        span.pay-header-title {
+            font-size:20px;
+            color:white;
+        }
+
+        span {}
+    }
+    .yg-pay-address {
+        margin-top:50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height:74px;
+        margin-bottom: 10px;
+        padding:10px;
+        border-bottom: 1px solid #ddd;
+        .pay-address-left {
+          .address-left-top {
+            font-size:17px;
+            height:27px;
+            line-height: 27px;
+            color:#404040;
+          }
+      
+          .address-left-bottom {
+            font-size:15px;
+            color:#999999;
+          }
+        }
+      
+        .pay-address-right {
+          i.icon.icon-select {
+      
+          }
+        }
+    }
+    .yg-pay-list {
+        .pay-list-item {
+            .list-item-shop {
+                height     : 46px;
+                width      : 100vw;
+                padding    : 0 10px;
+                display    : flex;
+                align-items: center;
+
+                /*no*/
+                i.icon.icon-radio {}
+
+                img {
+                    margin-left: 9px;
+                    width      : 30px;
+                    height     : 30px;
+                }
+
+                span.list-item-title {
+                    margin-left: 9px;
+                    font-size  : 17.5px;
+                    color      : #333333;
+                }
+            }
+
+            .list-item-content {
+                height       : 118px;
+                width        : 100vw;
+                margin-bottom: 10px;
+                padding      : 10px;
+                border-bottom: 1px solid #ddd;
+                /*no*/
+                border-top   : 1px solid #ddd;
+                /*no*/
+                display      : flex;
+
+                .item-content-left {
+                    display    : flex;
+                    align-items: center;
+
+                    img {
+                        width       : 96px;
+                        height      : 96px;
+                        margin-right: 10px;
+                    }
+
+                    .item-content-desc {
+                        span.content-desc-title {
+                            line-height       : 28px;
+                            overflow          : hidden;
+                            color             : #1a1a1a;
+                            font-size         : 20px;
+                            overflow-wrap     : break-word;
+                            text-overflow     : ellipsis;
+                            display           : -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                        }
+
+                        span.content-desc-type {
+                            color             : #737373;
+                            font-size         : 13px;
+                            line-height       : 20px;
+                            overflow          : hidden;
+                            text-overflow     : ellipsis;
+                            display           : -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                        }
+
+                        .content-desc-bottom {
+                            display        : flex;
+                            justify-content: space-between;
+                            width          : 239px;
+                            height         : 28px;
+
+                            span.content-desc-price {
+                                color             : var(--themeColor);
+                                font-size         : 17.5px;
+                                line-height       : 28px;
+                                overflow          : hidden;
+                                text-overflow     : ellipsis;
+                                display           : -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
+                                text-size-adjust  : 100%;
+                            }
+
+                            .item-content-right {
+                                display    : flex;
+                                align-items: center;
+
+
+                                span.content-right-num {
+                                    color             :var(--themeColor);
+                                    font-size         : 17px;
+                                    margin            : 5px;
+                                    height            : 20px;
+                                    line-height       : 20px;
+                                    overflow          : hidden;
+                                    text-overflow     : ellipsis;
+                                    display           : -webkit-box;
+                                    -webkit-line-clamp: 1;
+                                    -webkit-box-orient: vertical;
+                                }
+
+
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+
+    .yg-pay-tool {
+        position       : fixed;
+        left           : 0;
+        bottom         : 0px;
+        width          : 100vw;
+        height         : 56px;
+        padding        : 0 15px;
+        display        : flex;
+        justify-content: space-between;
+        border-top     : 1px solid #ddd;
+
+        .pay-tool-left {
+            height     : 56px;
+            line-height: 56px;
+
+            span.tool-left-totalPrice {
+                color    : #ee394a;
+                font-size: 17.5px;
+            }
+        }
+
+        .pay-tool-right {
+            display    : flex;
+            align-items: center;
+
+            span.tool-right-pay {
+                font-size       : 15px;
+                border-radius   : 5px;
+                display         : inline-block;
+                color           : white;
+                width           : 61px;
+                border-color    : #ee394a;
+                height          : 40px;
+                line-height          : 40px;
+                text-align: center;
+                background-color: var(--themeColor);
+            }
+        }
+    }
+}
